@@ -1,0 +1,12 @@
+from json.tool import main
+from multiprocessing.spawn import _main
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+if __name__="__main__":
+    app.run(debug=True) 
